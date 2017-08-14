@@ -1,0 +1,1 @@
+Quandl={"api": "https://www.quandl.com/api/v3/databases/"}
