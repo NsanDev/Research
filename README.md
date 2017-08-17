@@ -1,4 +1,5 @@
 # Research
+This project contains only convenient tools to fetch future contracts from [Quandl](https://www.quandl.com/).
 
 ## Getting started
 
