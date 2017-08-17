@@ -1,12 +1,17 @@
-from DataProvider.Quandl.daily_futures_fetcher import get_zip, Months
-from credentials import Quandl
+from DataProvider.Quandl.daily_futures_fetcher import get_zip_all_data_from_symbol
+
 month = 'Z'
-years = ['2016', '2017', '2018', '2019', '2020', '2021']
-market = 'ICE'
-symbol = 'B'
 
-import quandl
+market = 'CME'
+symbol = 'CY'
+limit_exp='2019'
 
-get_zip(market, symbol, Months, years, 'CL')
 
-data = quandl.get("ICE/BN2017", authtoken=Quandl["authtoken"])
+#contracts = get_existing_contract(market)
+filter = lambda contracts: (contracts["symbol"]==symbol) & (contracts["year"]>=limit_exp) #contracts is a dataframe. Set filter to True if you want to download all contracts
+get_zip_all_data_from_symbol(market,filter) # download all available future from market
+
+
+#data = quandl.get("CME/CLU2017", authtoken=Quandl["authtoken"]).to_csv()
+
+b=1
