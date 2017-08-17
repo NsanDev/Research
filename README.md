@@ -1,8 +1,8 @@
 # Research
 
-# Getting started.
+## Getting started
 
-* Install python 3
+* Install [python 3](https://www.continuum.io/downloads)
 * Install *quandl*
 ```python
 conda install quandl
